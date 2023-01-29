@@ -1,0 +1,196 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+  line-height: 1.1;
+  word-break: break-all;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  background-image: url(images/bg-mobile.png);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  padding: 2rem;
+}
+main .common-styles {
+  background-color: hsl(228deg, 56%, 26%);
+  padding: 2rem;
+}
+main .width {
+  width: 1.5rem;
+}
+main .first-box {
+  margin-bottom: 1rem;
+  border-radius: 0.6rem 5rem 0.6rem 0.6rem;
+}
+main .first-box .logo {
+  margin-bottom: 2rem;
+}
+main .first-box .storage-icons {
+  display: flex;
+}
+main .first-box .storage-icons div {
+  width: 3rem;
+  height: 3rem;
+  background-color: hsl(229deg, 57%, 11%);
+  margin-right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+main .second-box {
+  position: relative;
+  height: 12rem;
+  color: hsl(229deg, 7%, 55%);
+  border-radius: 0.6rem;
+}
+main .second-box .text {
+  margin-bottom: 1rem;
+}
+main .second-box .text h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+main .second-box .text span {
+  color: hsl(243deg, 100%, 93%);
+  font-weight: 700;
+}
+main .second-box .bar::before {
+  content: "0 GB";
+  color: hsl(243deg, 100%, 93%);
+  position: absolute;
+  left: 0;
+  top: 1.5rem;
+}
+main .second-box .bar::after {
+  content: "1000 GB";
+  color: hsl(243deg, 100%, 93%);
+  position: absolute;
+  right: 0;
+  top: 1.5rem;
+}
+main .second-box .bar {
+  position: relative;
+  width: 100%;
+  height: 1.2rem;
+  background-color: hsl(229deg, 57%, 11%);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+main .second-box .bar .range {
+  margin-left: 0.1rem;
+  width: 70%;
+  height: 0.8rem;
+  background: linear-gradient(hsl(6deg, 100%, 80%), hsl(335deg, 100%, 65%));
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .second-box .bar .range .ball {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: hsl(243deg, 100%, 93%);
+  position: absolute;
+  right: 0.1rem;
+}
+main .second-box .gb-left {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 50%;
+  height: 4rem;
+  bottom: -2rem;
+  left: 25%;
+  border-radius: 0.5rem;
+}
+main .second-box .gb-left b {
+  margin-right: 0.5rem;
+  font-family: "Raleway", sans-serif;
+  color: hsl(229deg, 57%, 11%);
+  font-size: 2rem;
+}
+main .second-box .gb-left span {
+  color: hsl(229deg, 7%, 55%);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 48em) {
+  body {
+    background-color: hsl(229deg, 57%, 11%);
+    background-image: url(images/bg-desktop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+  }
+  main {
+    width: 80%;
+    display: flex;
+  }
+  main .first-box {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+  main .second-box {
+    margin-top: 1rem;
+    width: 80%;
+    height: 11rem;
+  }
+  main .second-box .gb-left::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-top: 1rem solid white;
+    position: absolute;
+    right: 0;
+    bottom: -0.5rem;
+  }
+  main .second-box .gb-left {
+    width: 8rem;
+    top: -20%;
+    left: auto;
+    right: 1rem;
+  }
+}/*# sourceMappingURL=input.css.map */
